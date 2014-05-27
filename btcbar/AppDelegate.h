@@ -6,7 +6,6 @@
 #import <Cocoa/Cocoa.h>
 
 #import "MtGoxUSDFetcher.h"
-#import "BitStampUSDFetcher.h"
 #import "CoinbaseUSDFetcher.h"
 #import "BTCeUSDFetcher.h"
 #import "HuobiRMBFetcher.h"

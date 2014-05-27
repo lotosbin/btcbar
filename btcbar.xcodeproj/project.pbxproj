@@ -11,9 +11,12 @@
 		830CE09B171B6C3E00DDD525 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 830CE099171B6C3E00DDD525 /* InfoPlist.strings */; };
 		830CE09D171B6C3E00DDD525 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 830CE09C171B6C3E00DDD525 /* main.m */; };
 		830CE0A4171B6C3E00DDD525 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 830CE0A3171B6C3E00DDD525 /* AppDelegate.m */; };
+		832B4BB018ADF52B004CAF8C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832B4B9F18ADF457004CAF8C /* CoreFoundation.framework */; };
+		832B4BB618ADF52B004CAF8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 832B4BB418ADF52B004CAF8C /* InfoPlist.strings */; };
+		832B4BBB18ADF700004CAF8C /* BitStampUSDFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C3E7421859700100FA2921 /* BitStampUSDFetcher.m */; };
+		832B4BEB18ADFF70004CAF8C /* btcbar-bitstampusd.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 832B4BAF18ADF52B004CAF8C /* btcbar-bitstampusd.bundle */; };
 		838F835018602990007A7AAE /* btclogoDim.png in Resources */ = {isa = PBXBuildFile; fileRef = 838F834E18602990007A7AAE /* btclogoDim.png */; };
 		838F835118602990007A7AAE /* btclogoDim@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 838F834F18602990007A7AAE /* btclogoDim@2x.png */; };
-		83C3E7491859700100FA2921 /* BitStampUSDFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C3E7421859700100FA2921 /* BitStampUSDFetcher.m */; };
 		83C3E74A1859700100FA2921 /* BTCeUSDFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C3E7441859700100FA2921 /* BTCeUSDFetcher.m */; };
 		83C3E74B1859700100FA2921 /* CoinbaseUSDFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C3E7461859700100FA2921 /* CoinbaseUSDFetcher.m */; };
 		83C3E74C1859700100FA2921 /* MtGoxUSDFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C3E7481859700100FA2921 /* MtGoxUSDFetcher.m */; };
@@ -25,6 +28,29 @@
 		83C3E759185970C800FA2921 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 83C3E758185970C800FA2921 /* Icon.icns */; };
 		90347B7918ACB073005C42A8 /* HuobiRMBFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 90347B7818ACB073005C42A8 /* HuobiRMBFetcher.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		832B4BE718ADFB40004CAF8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 830CE085171B6C3E00DDD525 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 832B4BAE18ADF52B004CAF8C;
+			remoteInfo = "btcbar-bitstampusd";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		832B4BEA18ADFF57004CAF8C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				832B4BEB18ADFF70004CAF8C /* btcbar-bitstampusd.bundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		830CE08D171B6C3E00DDD525 /* btcbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = btcbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,11 +65,17 @@
 		830CE0A2171B6C3E00DDD525 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		830CE0A3171B6C3E00DDD525 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		830CE0AE171B6C3F00DDD525 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		832B4B9F18ADF457004CAF8C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		832B4BAF18ADF52B004CAF8C /* btcbar-bitstampusd.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "btcbar-bitstampusd.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		832B4BB318ADF52B004CAF8C /* btcbar-bitstampusd-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "btcbar-bitstampusd-Info.plist"; sourceTree = "<group>"; };
+		832B4BB518ADF52B004CAF8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		832B4BB718ADF52B004CAF8C /* btcbar-bitstampusd-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "btcbar-bitstampusd-Prefix.pch"; sourceTree = "<group>"; };
+		832B4BD218ADF7BF004CAF8C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		838F4296182E2F6E00B4FC58 /* Fetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fetcher.h; sourceTree = "<group>"; };
 		838F834E18602990007A7AAE /* btclogoDim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btclogoDim.png; path = Icons/btclogoDim.png; sourceTree = "<group>"; };
 		838F834F18602990007A7AAE /* btclogoDim@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btclogoDim@2x.png"; path = "Icons/btclogoDim@2x.png"; sourceTree = "<group>"; };
-		83C3E7411859700100FA2921 /* BitStampUSDFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BitStampUSDFetcher.h; path = Fetchers/BitStampUSDFetcher.h; sourceTree = "<group>"; };
-		83C3E7421859700100FA2921 /* BitStampUSDFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BitStampUSDFetcher.m; path = Fetchers/BitStampUSDFetcher.m; sourceTree = "<group>"; };
+		83C3E7411859700100FA2921 /* BitStampUSDFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BitStampUSDFetcher.h; path = ../btcbar/Fetchers/BitStampUSDFetcher.h; sourceTree = "<group>"; };
+		83C3E7421859700100FA2921 /* BitStampUSDFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BitStampUSDFetcher.m; path = ../btcbar/Fetchers/BitStampUSDFetcher.m; sourceTree = "<group>"; };
 		83C3E7431859700100FA2921 /* BTCeUSDFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTCeUSDFetcher.h; path = Fetchers/BTCeUSDFetcher.h; sourceTree = "<group>"; };
 		83C3E7441859700100FA2921 /* BTCeUSDFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTCeUSDFetcher.m; path = Fetchers/BTCeUSDFetcher.m; sourceTree = "<group>"; };
 		83C3E7451859700100FA2921 /* CoinbaseUSDFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoinbaseUSDFetcher.h; path = Fetchers/CoinbaseUSDFetcher.h; sourceTree = "<group>"; };
@@ -69,6 +101,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		832B4BAC18ADF52B004CAF8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832B4BB018ADF52B004CAF8C /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				830CE096171B6C3E00DDD525 /* btcbar */,
+				832B4BB118ADF52B004CAF8C /* btcbar-bitstampusd */,
 				830CE08F171B6C3E00DDD525 /* Frameworks */,
 				830CE08E171B6C3E00DDD525 /* Products */,
 			);
@@ -85,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				830CE08D171B6C3E00DDD525 /* btcbar.app */,
+				832B4BAF18ADF52B004CAF8C /* btcbar-bitstampusd.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +136,8 @@
 			children = (
 				830CE090171B6C3E00DDD525 /* Cocoa.framework */,
 				830CE0AE171B6C3F00DDD525 /* SenTestingKit.framework */,
+				832B4B9F18ADF457004CAF8C /* CoreFoundation.framework */,
+				832B4BD218ADF7BF004CAF8C /* XCTest.framework */,
 				830CE092171B6C3E00DDD525 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -148,11 +192,29 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
-		838F4297182E5A5000B4FC58 /* Fetchers */ = {
+		832B4BB118ADF52B004CAF8C /* btcbar-bitstampusd */ = {
 			isa = PBXGroup;
 			children = (
 				83C3E7411859700100FA2921 /* BitStampUSDFetcher.h */,
 				83C3E7421859700100FA2921 /* BitStampUSDFetcher.m */,
+				832B4BB218ADF52B004CAF8C /* Supporting Files */,
+			);
+			path = "btcbar-bitstampusd";
+			sourceTree = "<group>";
+		};
+		832B4BB218ADF52B004CAF8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				832B4BB318ADF52B004CAF8C /* btcbar-bitstampusd-Info.plist */,
+				832B4BB418ADF52B004CAF8C /* InfoPlist.strings */,
+				832B4BB718ADF52B004CAF8C /* btcbar-bitstampusd-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		838F4297182E5A5000B4FC58 /* Fetchers */ = {
+			isa = PBXGroup;
+			children = (
 				83C3E7431859700100FA2921 /* BTCeUSDFetcher.h */,
 				83C3E7441859700100FA2921 /* BTCeUSDFetcher.m */,
 				83C3E7451859700100FA2921 /* CoinbaseUSDFetcher.h */,
@@ -183,15 +245,34 @@
 				830CE089171B6C3E00DDD525 /* Sources */,
 				830CE08A171B6C3E00DDD525 /* Frameworks */,
 				830CE08B171B6C3E00DDD525 /* Resources */,
+				832B4BEA18ADFF57004CAF8C /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				832B4BE818ADFB40004CAF8C /* PBXTargetDependency */,
 			);
 			name = btcbar;
 			productName = btcbar;
 			productReference = 830CE08D171B6C3E00DDD525 /* btcbar.app */;
 			productType = "com.apple.product-type.application";
+		};
+		832B4BAE18ADF52B004CAF8C /* btcbar-bitstampusd */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 832B4BB818ADF52B004CAF8C /* Build configuration list for PBXNativeTarget "btcbar-bitstampusd" */;
+			buildPhases = (
+				832B4BAB18ADF52B004CAF8C /* Sources */,
+				832B4BAC18ADF52B004CAF8C /* Frameworks */,
+				832B4BAD18ADF52B004CAF8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "btcbar-bitstampusd";
+			productName = "btcbar-bitstampusd";
+			productReference = 832B4BAF18ADF52B004CAF8C /* btcbar-bitstampusd.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -215,6 +296,7 @@
 			projectRoot = "";
 			targets = (
 				830CE08C171B6C3E00DDD525 /* btcbar */,
+				832B4BAE18ADF52B004CAF8C /* btcbar-bitstampusd */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +318,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		832B4BAD18ADF52B004CAF8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832B4BB618ADF52B004CAF8C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -243,7 +333,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83C3E7491859700100FA2921 /* BitStampUSDFetcher.m in Sources */,
 				830CE09D171B6C3E00DDD525 /* main.m in Sources */,
 				83C3E74C1859700100FA2921 /* MtGoxUSDFetcher.m in Sources */,
 				90347B7918ACB073005C42A8 /* HuobiRMBFetcher.m in Sources */,
@@ -253,13 +342,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		832B4BAB18ADF52B004CAF8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832B4BBB18ADF700004CAF8C /* BitStampUSDFetcher.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		832B4BE818ADFB40004CAF8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 832B4BAE18ADF52B004CAF8C /* btcbar-bitstampusd */;
+			targetProxy = 832B4BE718ADFB40004CAF8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		830CE099171B6C3E00DDD525 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				830CE09A171B6C3E00DDD525 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		832B4BB418ADF52B004CAF8C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				832B4BB518ADF52B004CAF8C /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -350,6 +463,53 @@
 			};
 			name = Release;
 		};
+		832B4BB918ADF52B004CAF8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "btcbar-bitstampusd/btcbar-bitstampusd-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "btcbar-bitstampusd/btcbar-bitstampusd-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		832B4BBA18ADF52B004CAF8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "btcbar-bitstampusd/btcbar-bitstampusd-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "btcbar-bitstampusd/btcbar-bitstampusd-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -370,6 +530,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		832B4BB818ADF52B004CAF8C /* Build configuration list for PBXNativeTarget "btcbar-bitstampusd" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832B4BB918ADF52B004CAF8C /* Debug */,
+				832B4BBA18ADF52B004CAF8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

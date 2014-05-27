@@ -24,16 +24,15 @@
      selector:@selector(handleTickerNotification:)
      name:@"btcbar_ticker_update"
      object:nil];
-    
+
     // Pass each ticker object into a dictionary, get first updates
-    tickers = [NSMutableArray arrayWithObjects:
-               [[BitStampUSDFetcher alloc] init],
-               [[BTCeUSDFetcher alloc] init],
-               [[CoinbaseUSDFetcher alloc] init],
-               [[MtGoxUSDFetcher alloc] init],
-               [[HuobiRMBFetcher alloc] init],
-               nil];
-    
+    [self loadAllBundles];
+    [tickers addObjectsFromArray:[NSMutableArray arrayWithObjects:
+                                  [[BTCeUSDFetcher alloc] init],
+                                  [[CoinbaseUSDFetcher alloc] init],
+                                  [[MtGoxUSDFetcher alloc] init],
+                                  [[HuobiRMBFetcher alloc] init],
+                                  nil]];
     
     // If ticker preference does not exist, default to 0
     if (![prefs integerForKey:@"btcbar_ticker"])
@@ -77,6 +76,88 @@
     // Setup timer to update all tickers every 10 seconds
     updateDataTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(updateDataTimerAction:) userInfo:nil repeats:YES];
 }
+
+// Parses PlugIn bundles into objects
+- (void)loadAllBundles
+{
+    NSMutableArray *bundlePaths;
+    NSEnumerator *pathEnum;
+    NSString *currPath;
+    NSBundle *currBundle;
+    Class currPrincipalClass;
+    id currInstance;
+    
+    bundlePaths = [NSMutableArray array];
+    
+    if(!tickers)
+    {
+        tickers = [[NSMutableArray alloc] init];
+    }
+    
+    [bundlePaths addObjectsFromArray:[self allBundles]];
+    pathEnum = [bundlePaths objectEnumerator];
+    
+    while (currPath = [pathEnum nextObject])
+    {
+        currBundle = [NSBundle bundleWithPath:currPath];
+        if (currBundle)
+        {
+            currPrincipalClass = [currBundle principalClass];
+            if (currPrincipalClass)
+            {
+                currInstance = [[currPrincipalClass alloc] init];
+                if (currInstance)
+                {
+                    // TODO some sort of check to validate they follow the protocol I guess
+                    [tickers addObject:currInstance];
+                }
+            }
+        }
+    }
+}
+
+// Locates PlugIn bundles on filesystem and laods them
+- (NSMutableArray *)allBundles
+{
+    NSString *ext = @"bundle";
+    NSString *appSupportSubpath = @"Application Support/btcbar/PlugIns";
+    NSArray *librarySearchPaths;
+    NSEnumerator *searchPathEnum;
+    NSString *currPath;
+    NSMutableArray *bundleSearchPaths = [NSMutableArray array];
+    NSMutableArray *allBundles = [NSMutableArray array];
+    
+    librarySearchPaths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSAllDomainsMask - NSSystemDomainMask, YES);
+    searchPathEnum = [librarySearchPaths objectEnumerator];
+    
+    while (currPath = [searchPathEnum nextObject])
+    {
+        [bundleSearchPaths addObject:[currPath stringByAppendingPathComponent:appSupportSubpath]];
+    }
+    
+    [bundleSearchPaths addObject:[[NSBundle mainBundle] builtInPlugInsPath]];
+    searchPathEnum = [bundleSearchPaths objectEnumerator];
+    
+    while (currPath = [searchPathEnum nextObject])
+    {
+        NSDirectoryEnumerator *bundleEnum;
+        NSString *currBundlePath;
+        bundleEnum = [[NSFileManager defaultManager] enumeratorAtPath:currPath];
+        
+        if (bundleEnum)
+        {
+            while (currBundlePath = [bundleEnum nextObject])
+            {
+                if ([[currBundlePath pathExtension] isEqualToString:ext])
+                {
+                    [allBundles addObject:[currPath stringByAppendingPathComponent:currBundlePath]];
+                }
+            }
+        }
+    }
+    return allBundles;
+}
+
 
 
 //
